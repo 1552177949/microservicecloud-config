@@ -1,29 +1,15 @@
 ﻿spring: 
     profiles: 
         active: 
-            一 dev
+            - dev
 ---
-
-server: 
-    port: 8201
-sprlng : 
-    profiles: dev
-    application: 
-        name: microservicecloudconfig-client 
-eureka： 
-    client: 
-        service一url: 
-            defaultZone: http://eureka-dev.com:7001/eureka/ 
-
----
-
-server: 
-    port: 8202
 spring: 
-    profiles: test
+    profiles: dev #开发环境
     application: 
-        name: microservicecloud-config-client
-eureka： 
-    client: 
-        service一url: 
-            defaultZone : http://eureka-dev.com:7001/eureka/
+        name: microservicecloud-config-everjiankang-dev
+---
+spring: 
+    profiles: test #测试环境
+    application: 
+        name: microservicecloud-config-everjiankang-test
+#请保存为UTF-8编码格式
